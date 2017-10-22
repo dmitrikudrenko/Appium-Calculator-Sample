@@ -3,6 +3,7 @@
 1) JDK 8
 2) Android AVD Manager (или реальный девайс на Android)
 3) Appium Server (http://appium.io)
+4) Maven
 
 Шаги запуска:
 =============
@@ -15,3 +16,7 @@
 1) Подключить устройство к компьютеру, где запущен Appium server
 2) Если нужно, изменить sdkVersion в settings.properties
 3) В CalculatorConstants изменить использование Emulator на RealDevice
+
+Запуск:
+=======
+```mvn test```

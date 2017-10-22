@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-public class OperationTests extends CalculatorAbstractTest {
+public class OperationTest extends CalculatorAbstractTest {
     @Test
     public void fivePlusFourOperation() {
         String expectedResult = "9";

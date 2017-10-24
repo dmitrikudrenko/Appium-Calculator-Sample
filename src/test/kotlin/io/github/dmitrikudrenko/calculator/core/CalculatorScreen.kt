@@ -81,7 +81,7 @@ class CalculatorScreen(driver: AppiumDriver<*>) : AbstractScreen(driver) {
                 '8' -> eightBtn?.shouldClick()
                 '9' -> nineBtn?.shouldClick()
                 '+' -> plusBtn?.shouldClick()
-                '-' -> minusBtn?.shouldClick()
+                '−' -> minusBtn?.shouldClick()
                 '×' -> multipleBtn?.shouldClick()
                 '÷' -> divideBtn?.shouldClick()
                 '=' -> equalsBtn?.shouldClick()

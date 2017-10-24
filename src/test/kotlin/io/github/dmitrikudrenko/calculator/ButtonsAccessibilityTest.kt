@@ -3,6 +3,7 @@ package io.github.dmitrikudrenko.calculator
 import io.github.dmitrikudrenko.calculator.core.CalculatorAbstractTest
 import io.github.dmitrikudrenko.core.shouldBeDisplayedAndEnabled
 import io.github.dmitrikudrenko.core.shouldHaveText
+import io.github.dmitrikudrenko.core.shouldNotBeDisplayed
 import org.testng.annotations.Test
 
 class ButtonsAccessibilityTest : CalculatorAbstractTest() {
@@ -123,5 +124,11 @@ class ButtonsAccessibilityTest : CalculatorAbstractTest() {
         calculatorScreen?.deleteBtn
                 ?.shouldBeDisplayedAndEnabled()
                 ?.shouldHaveText("DEL")
+    }
+
+    @Test(groups = arrayOf("operations_accessibility"), dependsOnGroups = arrayOf("digits_accessibility"))
+    fun clearTest() {
+        calculatorScreen?.clearBtn
+                ?.shouldNotBeDisplayed()
     }
 }

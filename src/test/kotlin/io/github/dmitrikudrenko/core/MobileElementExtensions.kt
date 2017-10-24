@@ -9,6 +9,13 @@ fun MobileElement.shouldBeDisplayed(): MobileElement {
     return this
 }
 
+fun MobileElement.shouldNotBeDisplayed(): MobileElement {
+    if (isDisplayed) {
+        throw AssertionError("Element $id should not be displayed")
+    }
+    return this
+}
+
 fun MobileElement.shouldBeEnabled(): MobileElement {
     if (!isEnabled) {
         throw AssertionError("Element $id should be enabled")

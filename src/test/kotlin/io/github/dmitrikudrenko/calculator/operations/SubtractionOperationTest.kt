@@ -25,6 +25,6 @@ class SubtractionOperationTest : AbstractOperationTest() {
     @Test
     fun `zero minus one should be -one`() {
         calculatorScreen?.inputFormula("0-1=")
-        calculatorScreen?.resultField?.shouldHaveText("-1")
+        calculatorScreen?.resultField?.shouldHaveText("−1")
     }
 }

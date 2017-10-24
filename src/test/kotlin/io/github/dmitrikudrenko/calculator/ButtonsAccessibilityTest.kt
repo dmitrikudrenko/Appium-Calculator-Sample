@@ -8,126 +8,126 @@ import org.testng.annotations.Test
 
 class ButtonsAccessibilityTest : CalculatorAbstractTest() {
     @Test(groups = arrayOf("digits_accessibility"))
-    fun zeroDigitTest() {
+    fun `zero button should be displayed and enabled`() {
         calculatorScreen?.zeroBtn
                 ?.shouldBeDisplayedAndEnabled()
                 ?.shouldHaveText("0")
     }
 
     @Test(groups = arrayOf("digits_accessibility"))
-    fun oneDigitTest() {
+    fun `one button should be displayed and enabled`() {
         calculatorScreen?.oneBtn
                 ?.shouldBeDisplayedAndEnabled()
                 ?.shouldHaveText("1")
     }
 
     @Test(groups = arrayOf("digits_accessibility"))
-    fun twoDigitTest() {
+    fun `two button should be displayed and enabled`() {
         calculatorScreen?.twoBtn
                 ?.shouldBeDisplayedAndEnabled()
                 ?.shouldHaveText("2")
     }
 
     @Test(groups = arrayOf("digits_accessibility"))
-    fun threeDigitTest() {
+    fun `three button should be displayed and enabled`() {
         calculatorScreen?.threeBtn
                 ?.shouldBeDisplayedAndEnabled()
                 ?.shouldHaveText("3")
     }
 
     @Test(groups = arrayOf("digits_accessibility"))
-    fun fourDigitTest() {
+    fun `four button should be displayed and enabled`() {
         calculatorScreen?.fourBtn
                 ?.shouldBeDisplayedAndEnabled()
                 ?.shouldHaveText("4")
     }
 
     @Test(groups = arrayOf("digits_accessibility"))
-    fun fiveDigitTest() {
+    fun `five button should be displayed and enabled`() {
         calculatorScreen?.fiveBtn
                 ?.shouldBeDisplayedAndEnabled()
                 ?.shouldHaveText("5")
     }
 
     @Test(groups = arrayOf("digits_accessibility"))
-    fun sixDigitTest() {
+    fun `six button should be displayed and enabled`() {
         calculatorScreen?.sixBtn
                 ?.shouldBeDisplayedAndEnabled()
                 ?.shouldHaveText("6")
     }
 
     @Test(groups = arrayOf("digits_accessibility"))
-    fun sevenDigitTest() {
+    fun `seven button should be displayed and enabled`() {
         calculatorScreen?.sevenBtn
                 ?.shouldBeDisplayedAndEnabled()
                 ?.shouldHaveText("7")
     }
 
     @Test(groups = arrayOf("digits_accessibility"))
-    fun eightDigitTest() {
+    fun `eight button should be displayed and enabled`() {
         calculatorScreen?.eightBtn
                 ?.shouldBeDisplayedAndEnabled()
                 ?.shouldHaveText("8")
     }
 
     @Test(groups = arrayOf("digits_accessibility"))
-    fun nineDigitTest() {
+    fun `nine button should be displayed and enabled`() {
         calculatorScreen?.nineBtn
                 ?.shouldBeDisplayedAndEnabled()
                 ?.shouldHaveText("9")
     }
 
     @Test(groups = arrayOf("operations_accessibility"), dependsOnGroups = arrayOf("digits_accessibility"))
-    fun plusTest() {
+    fun `plus button should be displayed and enabled`() {
         calculatorScreen?.plusBtn
                 ?.shouldBeDisplayedAndEnabled()
                 ?.shouldHaveText("+")
     }
 
     @Test(groups = arrayOf("operations_accessibility"), dependsOnGroups = arrayOf("digits_accessibility"))
-    fun minusTest() {
+    fun `minus button should be displayed and enabled`() {
         calculatorScreen?.minusBtn
                 ?.shouldBeDisplayedAndEnabled()
                 ?.shouldHaveText("−")
     }
 
     @Test(groups = arrayOf("operations_accessibility"), dependsOnGroups = arrayOf("digits_accessibility"))
-    fun divideTest() {
+    fun `divide button should be displayed and enabled`() {
         calculatorScreen?.divideBtn
                 ?.shouldBeDisplayedAndEnabled()
                 ?.shouldHaveText("÷")
     }
 
     @Test(groups = arrayOf("operations_accessibility"), dependsOnGroups = arrayOf("digits_accessibility"))
-    fun multipleTest() {
+    fun `multiple button should be displayed and enabled`() {
         calculatorScreen?.multipleBtn
                 ?.shouldBeDisplayedAndEnabled()
                 ?.shouldHaveText("×")
     }
 
     @Test(groups = arrayOf("operations_accessibility"), dependsOnGroups = arrayOf("digits_accessibility"))
-    fun equalsTest() {
+    fun `equals button should be displayed and enabled`() {
         calculatorScreen?.equalsBtn
                 ?.shouldBeDisplayedAndEnabled()
                 ?.shouldHaveText("=")
     }
 
     @Test(groups = arrayOf("operations_accessibility"), dependsOnGroups = arrayOf("digits_accessibility"))
-    fun decimalPointTest() {
+    fun `decimal point button should be displayed and enabled`() {
         calculatorScreen?.decimalPointBtn
                 ?.shouldBeDisplayedAndEnabled()
                 ?.shouldHaveText(".")
     }
 
     @Test(groups = arrayOf("operations_accessibility"), dependsOnGroups = arrayOf("digits_accessibility"))
-    fun deleteTest() {
+    fun `delete button should be displayed and enabled`() {
         calculatorScreen?.deleteBtn
                 ?.shouldBeDisplayedAndEnabled()
                 ?.shouldHaveText("DEL")
     }
 
     @Test(groups = arrayOf("operations_accessibility"), dependsOnGroups = arrayOf("digits_accessibility"))
-    fun clearTest() {
+    fun `clear button should not be displayed`() {
         calculatorScreen?.clearBtn
                 ?.shouldNotBeDisplayed()
     }

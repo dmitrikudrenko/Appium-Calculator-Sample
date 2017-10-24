@@ -3,101 +3,72 @@ package io.github.dmitrikudrenko.calculator
 import io.github.dmitrikudrenko.calculator.core.CalculatorAbstractTest
 import io.github.dmitrikudrenko.core.shouldClick
 import io.github.dmitrikudrenko.core.shouldHaveText
+import org.testng.annotations.AfterMethod
 import org.testng.annotations.Test
 
 class ButtonsClickTest : CalculatorAbstractTest() {
     @Test(groups = arrayOf("single_tap"))
-    fun zeroDigitClick() {
+    fun `formula should contain 0 after zero button click`() {
         calculatorScreen?.zeroBtn?.shouldClick()
         calculatorScreen?.formulaField?.shouldHaveText("0")
-
-        calculatorScreen?.deleteBtn?.shouldClick()
-        calculatorScreen?.formulaField?.shouldHaveText("")
     }
 
     @Test(groups = arrayOf("single_tap"))
-    fun oneDigitClick() {
+    fun `formula should contain 1 after one button click`() {
         calculatorScreen?.oneBtn?.shouldClick()
         calculatorScreen?.formulaField?.shouldHaveText("1")
-
-        calculatorScreen?.deleteBtn?.shouldClick()
-        calculatorScreen?.formulaField?.shouldHaveText("")
     }
 
     @Test(groups = arrayOf("single_tap"))
-    fun twoDigitClick() {
+    fun `formula should contain 2 after two button click`() {
         calculatorScreen?.twoBtn?.shouldClick()
         calculatorScreen?.formulaField?.shouldHaveText("2")
-
-        calculatorScreen?.deleteBtn?.shouldClick()
-        calculatorScreen?.formulaField?.shouldHaveText("")
     }
 
     @Test(groups = arrayOf("single_tap"))
-    fun threeDigitClick() {
+    fun `formula should contain 3 after three button click`() {
         calculatorScreen?.threeBtn?.shouldClick()
         calculatorScreen?.formulaField?.shouldHaveText("3")
-
-        calculatorScreen?.deleteBtn?.shouldClick()
-        calculatorScreen?.formulaField?.shouldHaveText("")
     }
 
     @Test(groups = arrayOf("single_tap"))
-    fun fourDigitClick() {
+    fun `formula should contain 4 after four button click`() {
         calculatorScreen?.fourBtn?.shouldClick()
         calculatorScreen?.formulaField?.shouldHaveText("4")
-
-        calculatorScreen?.deleteBtn?.shouldClick()
-        calculatorScreen?.formulaField?.shouldHaveText("")
     }
 
     @Test(groups = arrayOf("single_tap"))
-    fun fiveDigitClick() {
+    fun `formula should contain 5 after five button click`() {
         calculatorScreen?.fiveBtn?.shouldClick()
         calculatorScreen?.formulaField?.shouldHaveText("5")
-
-        calculatorScreen?.deleteBtn?.shouldClick()
-        calculatorScreen?.formulaField?.shouldHaveText("")
     }
 
     @Test(groups = arrayOf("single_tap"))
-    fun sixDigitClick() {
+    fun `formula should contain 6 after six button click`() {
         calculatorScreen?.sixBtn?.shouldClick()
         calculatorScreen?.formulaField?.shouldHaveText("6")
-
-        calculatorScreen?.deleteBtn?.shouldClick()
-        calculatorScreen?.formulaField?.shouldHaveText("")
     }
 
     @Test(groups = arrayOf("single_tap"))
-    fun sevenDigitClick() {
+    fun `formula should contain 7 after seven button click`() {
         calculatorScreen?.sevenBtn?.shouldClick()
         calculatorScreen?.formulaField?.shouldHaveText("7")
-
-        calculatorScreen?.deleteBtn?.shouldClick()
-        calculatorScreen?.formulaField?.shouldHaveText("")
     }
 
     @Test(groups = arrayOf("single_tap"))
-    fun eightDigitClick() {
+    fun `formula should contain 8 after eight button click`() {
         calculatorScreen?.eightBtn?.shouldClick()
         calculatorScreen?.formulaField?.shouldHaveText("8")
-
-        calculatorScreen?.deleteBtn?.shouldClick()
-        calculatorScreen?.formulaField?.shouldHaveText("")
     }
 
     @Test(groups = arrayOf("single_tap"))
-    fun nineDigitClick() {
+    fun `formula should contain 9 after nine button click`() {
         calculatorScreen?.nineBtn?.shouldClick()
         calculatorScreen?.formulaField?.shouldHaveText("9")
-
-        calculatorScreen?.deleteBtn?.shouldClick()
-        calculatorScreen?.formulaField?.shouldHaveText("")
     }
 
     @Test(groups = arrayOf("complex_tap"), dependsOnGroups = arrayOf("single_tap"))
-    fun complexClickTest() {
+    fun `formula should contain data that user inputed`() {
         calculatorScreen?.oneBtn?.shouldClick()
         calculatorScreen?.formulaField?.shouldHaveText("1")
 
@@ -127,5 +98,11 @@ class ButtonsClickTest : CalculatorAbstractTest() {
 
         calculatorScreen?.zeroBtn?.shouldClick()
         calculatorScreen?.formulaField?.shouldHaveText("1234567890")
+    }
+
+    @AfterMethod
+    fun `clear`() {
+        calculatorScreen?.deleteBtn?.shouldClick()
+        calculatorScreen?.formulaField?.shouldHaveText("")
     }
 }

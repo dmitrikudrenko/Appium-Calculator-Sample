@@ -5,6 +5,7 @@ import io.appium.java_client.MobileElement
 import io.appium.java_client.pagefactory.AndroidFindBy
 import io.github.dmitrikudrenko.core.AbstractScreen
 import io.github.dmitrikudrenko.core.shouldClick
+import io.github.dmitrikudrenko.core.shouldHaveText
 
 class CalculatorScreen(driver: AppiumDriver<*>) : AbstractScreen(driver) {
     @AndroidFindBy(id = CalculatorConstants.ID + "digit_0")
@@ -67,7 +68,7 @@ class CalculatorScreen(driver: AppiumDriver<*>) : AbstractScreen(driver) {
     @AndroidFindBy(id = CalculatorConstants.ID + "formula")
     val formulaField: MobileElement? = null
 
-    fun inputFormula(formula: String) {
+    fun inputFormula(formula: String): CalculatorScreen {
         for (digit in formula.toCharArray()) {
             when (digit) {
                 '0' -> zeroBtn?.shouldClick()
@@ -87,5 +88,11 @@ class CalculatorScreen(driver: AppiumDriver<*>) : AbstractScreen(driver) {
                 '=' -> equalsBtn?.shouldClick()
             }
         }
+        return this
+    }
+
+    fun shouldBeResult(result: String): CalculatorScreen {
+        resultField?.shouldHaveText(result)
+        return this
     }
 }

@@ -3,6 +3,7 @@ package io.github.dmitrikudrenko.calculator
 import io.github.dmitrikudrenko.calculator.core.CalculatorAbstractTest
 import io.github.dmitrikudrenko.core.shouldClick
 import io.github.dmitrikudrenko.core.shouldHaveText
+import io.github.dmitrikudrenko.core.shouldLongClick
 import org.testng.annotations.AfterMethod
 import org.testng.annotations.Test
 
@@ -100,9 +101,15 @@ class ButtonsClickTest : CalculatorAbstractTest() {
         calculatorScreen?.formulaField?.shouldHaveText("1234567890")
     }
 
-    @AfterMethod
+    @AfterMethod(groups = arrayOf("single_tap"))
     fun `clear`() {
         calculatorScreen?.deleteBtn?.shouldClick()
+        calculatorScreen?.formulaField?.shouldHaveText("")
+    }
+
+    @AfterMethod(groups = arrayOf("complex_tap"))
+    fun `clear all`() {
+        calculatorScreen?.deleteBtn?.shouldLongClick()
         calculatorScreen?.formulaField?.shouldHaveText("")
     }
 }

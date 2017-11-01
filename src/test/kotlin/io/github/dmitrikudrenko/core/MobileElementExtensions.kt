@@ -1,6 +1,8 @@
 package io.github.dmitrikudrenko.core
 
+import io.appium.java_client.MobileDriver
 import io.appium.java_client.MobileElement
+import io.appium.java_client.TouchAction
 
 fun MobileElement.shouldBeDisplayed(): MobileElement {
     if (!isDisplayed) {
@@ -38,3 +40,10 @@ fun MobileElement.shouldClick(): MobileElement {
     shouldBeDisplayedAndEnabled().click()
     return this
 }
+
+fun MobileElement.shouldLongClick(): MobileElement {
+    TouchAction(getDriver()).longPress(this)
+    return this
+}
+
+fun MobileElement.getDriver(): MobileDriver<*> = this.wrappedDriver as MobileDriver<*>

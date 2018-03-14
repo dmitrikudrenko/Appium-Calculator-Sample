@@ -7,10 +7,10 @@ import io.github.dmitrikudrenko.core.AppiumDriverBuilder
 import java.io.IOException
 
 abstract class CalculatorAbstractTest : AbstractTest<CalculatorApplication>() {
-    protected var calculatorScreen: CalculatorScreen? = null
+    protected lateinit var calculatorScreen: CalculatorScreen
 
-    override fun onStart(application: CalculatorApplication?) {
-        calculatorScreen = application!!.calculatorScreen()
+    override fun onStart(application: CalculatorApplication) {
+        calculatorScreen = application.calculatorScreen()
     }
 
     override fun create(driver: AppiumDriver<*>): CalculatorApplication {

@@ -71,28 +71,28 @@ class CalculatorScreen(driver: AppiumDriver<*>) : AbstractScreen(driver) {
     fun inputFormula(formula: String): CalculatorScreen {
         for (digit in formula.toCharArray()) {
             when (digit) {
-                '0' -> zeroBtn?.shouldClick()
-                '1' -> oneBtn?.shouldClick()
-                '2' -> twoBtn?.shouldClick()
-                '3' -> threeBtn?.shouldClick()
-                '4' -> fourBtn?.shouldClick()
-                '5' -> fiveBtn?.shouldClick()
-                '6' -> sixBtn?.shouldClick()
-                '7' -> sevenBtn?.shouldClick()
-                '8' -> eightBtn?.shouldClick()
-                '9' -> nineBtn?.shouldClick()
-                '+' -> plusBtn?.shouldClick()
-                '−' -> minusBtn?.shouldClick()
-                '×' -> multipleBtn?.shouldClick()
-                '÷' -> divideBtn?.shouldClick()
-                '=' -> equalsBtn?.shouldClick()
+                '0' -> zeroBtn.shouldClick()
+                '1' -> oneBtn.shouldClick()
+                '2' -> twoBtn.shouldClick()
+                '3' -> threeBtn.shouldClick()
+                '4' -> fourBtn.shouldClick()
+                '5' -> fiveBtn.shouldClick()
+                '6' -> sixBtn.shouldClick()
+                '7' -> sevenBtn.shouldClick()
+                '8' -> eightBtn.shouldClick()
+                '9' -> nineBtn.shouldClick()
+                '+' -> plusBtn.shouldClick()
+                '−' -> minusBtn.shouldClick()
+                '×' -> multipleBtn.shouldClick()
+                '÷' -> divideBtn.shouldClick()
+                '=' -> equalsBtn.shouldClick()
             }
         }
         return this
     }
 
     fun shouldBeResult(result: String): CalculatorScreen {
-        resultField?.shouldHaveText(result)
+        resultField.shouldHaveText(result)
         return this
     }
 }

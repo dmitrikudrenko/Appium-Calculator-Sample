@@ -11,8 +11,7 @@ import java.util.*
 import java.util.concurrent.TimeUnit
 
 abstract class AbstractTest<Application : AbstractApplication> {
-    var application: Application? = null
-        private set
+    private lateinit var application: Application
 
     @BeforeClass
     @Throws(IOException::class, InterruptedException::class)
@@ -26,7 +25,7 @@ abstract class AbstractTest<Application : AbstractApplication> {
 
     @AfterClass
     fun tearDown() {
-        application?.driver?.closeApp()
+        application.driver.closeApp()
     }
 
     @Throws(IOException::class)
@@ -39,5 +38,5 @@ abstract class AbstractTest<Application : AbstractApplication> {
 
     protected abstract fun create(driver: AppiumDriver<*>): Application
 
-    protected open fun onStart(application: Application?) {}
+    protected open fun onStart(application: Application) {}
 }

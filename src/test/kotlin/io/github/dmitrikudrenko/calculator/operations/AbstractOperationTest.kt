@@ -7,6 +7,6 @@ import org.testng.annotations.AfterMethod
 abstract class AbstractOperationTest: CalculatorAbstractTest() {
     @AfterMethod
     fun `clear`() {
-        calculatorScreen?.clearBtn?.shouldClick()
+        calculatorScreen.clearBtn.shouldClick()
     }
 }

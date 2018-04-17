@@ -5,8 +5,8 @@ import io.appium.java_client.MobileElement
 import io.appium.java_client.TouchAction
 
 private fun MobileElement?.run(matcher: (MobileElement) -> MobileElement): MobileElement {
-    this?.let { matcher.invoke(it) }
-    throw AssertionError("Element not found")
+    if (this == null) { throw AssertionError("Element not found") }
+    return this.let { matcher.invoke(it) }
 }
 
 fun MobileElement?.shouldBeDisplayed(): MobileElement {
@@ -43,7 +43,7 @@ fun MobileElement?.shouldBeDisplayedAndEnabled(): MobileElement {
 fun MobileElement?.shouldHaveText(caption: String): MobileElement {
     return this.run {
         if (caption != it.text) {
-            throw AssertionError("Element $it.id should have text \"$caption\", but it has text \"$it.text\"")
+            throw AssertionError("Element ${it.id} should have text \"$caption\", but it has text \"${it.text}\"")
         }
         it
     }

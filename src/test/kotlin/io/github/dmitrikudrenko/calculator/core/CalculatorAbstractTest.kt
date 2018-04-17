@@ -20,7 +20,7 @@ abstract class CalculatorAbstractTest : AbstractTest<CalculatorApplication>() {
     @Throws(IOException::class)
     override fun createAndroidDriverBuilder(): AppiumDriverBuilder.AndroidDriverBuilder {
         return super.createAndroidDriverBuilder()
-                .withPackageName(CalculatorConstants.PACKAGE_NAME)
-                .withLaunchActivity(CalculatorConstants.LAUNCH_ACTIVITY)
+                .withPackageName(constants.packageName)
+                .withLaunchActivity(constants.launchActivity)
     }
 }

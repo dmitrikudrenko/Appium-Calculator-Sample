@@ -2,71 +2,51 @@ package io.github.dmitrikudrenko.calculator.core
 
 import io.appium.java_client.AppiumDriver
 import io.appium.java_client.MobileElement
-import io.appium.java_client.pagefactory.AndroidFindBy
 import io.github.dmitrikudrenko.core.AbstractScreen
+import io.github.dmitrikudrenko.core.bindOptionalElement
 import io.github.dmitrikudrenko.core.shouldClick
 import io.github.dmitrikudrenko.core.shouldHaveText
 
 class CalculatorScreen(driver: AppiumDriver<*>) : AbstractScreen(driver) {
-    @AndroidFindBy(id = CalculatorConstants.ID + "digit_0")
-    val zeroBtn: MobileElement? = null
+    val zeroBtn: MobileElement? by bindOptionalElement(constants.id + "digit_0")
 
-    @AndroidFindBy(id = CalculatorConstants.ID + "digit_1")
-    val oneBtn: MobileElement? = null
+    val oneBtn: MobileElement? by bindOptionalElement(constants.id + "digit_1")
 
-    @AndroidFindBy(id = CalculatorConstants.ID + "digit_2")
-    val twoBtn: MobileElement? = null
+    val twoBtn: MobileElement? by bindOptionalElement(constants.id + "digit_2")
 
-    @AndroidFindBy(id = CalculatorConstants.ID + "digit_3")
-    val threeBtn: MobileElement? = null
+    val threeBtn: MobileElement? by bindOptionalElement(constants.id + "digit_3")
 
-    @AndroidFindBy(id = CalculatorConstants.ID + "digit_4")
-    val fourBtn: MobileElement? = null
+    val fourBtn: MobileElement? by bindOptionalElement(constants.id + "digit_4")
 
-    @AndroidFindBy(id = CalculatorConstants.ID + "digit_5")
-    val fiveBtn: MobileElement? = null
+    val fiveBtn: MobileElement? by bindOptionalElement(constants.id + "digit_5")
 
-    @AndroidFindBy(id = CalculatorConstants.ID + "digit_6")
-    val sixBtn: MobileElement? = null
+    val sixBtn: MobileElement? by bindOptionalElement(constants.id + "digit_6")
 
-    @AndroidFindBy(id = CalculatorConstants.ID + "digit_7")
-    val sevenBtn: MobileElement? = null
+    val sevenBtn: MobileElement? by bindOptionalElement(constants.id + "digit_7")
 
-    @AndroidFindBy(id = CalculatorConstants.ID + "digit_8")
-    val eightBtn: MobileElement? = null
+    val eightBtn: MobileElement? by bindOptionalElement(constants.id + "digit_8")
 
-    @AndroidFindBy(id = CalculatorConstants.ID + "digit_9")
-    val nineBtn: MobileElement? = null
+    val nineBtn: MobileElement? by bindOptionalElement(constants.id + "digit_9")
 
-    @AndroidFindBy(id = CalculatorConstants.ID + "op_add")
-    val plusBtn: MobileElement? = null
+    val plusBtn: MobileElement? by bindOptionalElement(constants.id + "op_add")
 
-    @AndroidFindBy(id = CalculatorConstants.ID + "op_sub")
-    val minusBtn: MobileElement? = null
+    val minusBtn: MobileElement? by bindOptionalElement(constants.id + "op_sub")
 
-    @AndroidFindBy(id = CalculatorConstants.ID + "op_div")
-    val divideBtn: MobileElement? = null
+    val divideBtn: MobileElement? by bindOptionalElement(constants.id + "op_div")
 
-    @AndroidFindBy(id = CalculatorConstants.ID + "op_mul")
-    val multipleBtn: MobileElement? = null
+    val multipleBtn: MobileElement? by bindOptionalElement(constants.id + "op_mul")
 
-    @AndroidFindBy(id = CalculatorConstants.ID + "eq")
-    val equalsBtn: MobileElement? = null
+    val equalsBtn: MobileElement? by bindOptionalElement(constants.id + "eq")
 
-    @AndroidFindBy(id = CalculatorConstants.ID + "dec_point")
-    val decimalPointBtn: MobileElement? = null
+    val decimalPointBtn: MobileElement? by bindOptionalElement(constants.id + "dec_point")
 
-    @AndroidFindBy(id = CalculatorConstants.ID + "del")
-    val deleteBtn: MobileElement? = null
+    val deleteBtn: MobileElement? by bindOptionalElement(constants.id + "del")
 
-    @AndroidFindBy(id = CalculatorConstants.ID + "clr")
-    val clearBtn: MobileElement? = null
+    val clearBtn: MobileElement? by bindOptionalElement(constants.id + "clr")
 
-    @AndroidFindBy(id = CalculatorConstants.ID + "result")
-    val resultField: MobileElement? = null
+    val resultField: MobileElement? by bindOptionalElement(constants.id + "result")
 
-    @AndroidFindBy(id = CalculatorConstants.ID + "formula")
-    val formulaField: MobileElement? = null
+    val formulaField: MobileElement? by bindOptionalElement(constants.id + "formula")
 
     fun inputFormula(formula: String): CalculatorScreen {
         for (digit in formula.toCharArray()) {

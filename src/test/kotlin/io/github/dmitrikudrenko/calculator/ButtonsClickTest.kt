@@ -101,13 +101,13 @@ class ButtonsClickTest : CalculatorAbstractTest() {
         calculatorScreen.formulaField.shouldHaveText("1234567890")
     }
 
-    @AfterMethod(groups = arrayOf("single_tap"))
+    @AfterMethod(onlyForGroups = arrayOf("single_tap"))
     fun `clear`() {
         calculatorScreen.deleteBtn.shouldClick()
         calculatorScreen.formulaField.shouldHaveText("")
     }
 
-    @AfterMethod(groups = arrayOf("complex_tap"))
+    @AfterMethod(onlyForGroups = arrayOf("complex_tap"))
     fun `clear all`() {
         calculatorScreen.deleteBtn.shouldLongClick()
         calculatorScreen.formulaField.shouldHaveText("")

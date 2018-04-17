@@ -1,6 +1,6 @@
 package io.github.dmitrikudrenko.calculator.core
 
-val constants = RealDevice
+val constants = Emulator
 
 sealed class CalculatorConstants(
         val packageName: String,
@@ -23,7 +23,7 @@ object RealDevice :
         )
 
 private object EmulatorConstants {
-    const val PACKAGE_NAME = "com.android.calculator"
+    const val PACKAGE_NAME = "com.android.calculator2"
     const val LAUNCH_ACTIVITY = PACKAGE_NAME + ".Calculator"
     const val ID = PACKAGE_NAME + ":id/"
 }

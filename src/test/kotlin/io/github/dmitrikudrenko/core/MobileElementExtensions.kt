@@ -18,7 +18,9 @@ fun MobileElement?.shouldBeDisplayed(): MobileElement {
     }
 }
 
-fun MobileElement?.shouldNotBeDisplayed(): MobileElement {
+fun MobileElement?.shouldNotBeDisplayed(): MobileElement? {
+    if (this == null) return this
+
     return this.run {
         if (it.isDisplayed) {
             throw AssertionError("Element $it.id should not be displayed")
@@ -58,7 +60,7 @@ fun MobileElement?.shouldClick(): MobileElement {
 
 fun MobileElement?.shouldLongClick(): MobileElement {
     return this.run {
-        TouchAction(it.getDriver()).longPress(this)
+        TouchAction(it.getDriver()).longPress(this).release().perform()
         it
     }
 }

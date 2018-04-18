@@ -57,42 +57,42 @@ class ButtonsAccessibilityTest : CalculatorAbstractTest() {
         calculatorScreen.nineBtn.shouldBeDisplayedAndEnabled().shouldHaveText("9")
     }
 
-    @Test(groups = arrayOf("operations_accessibility"), dependsOnGroups = arrayOf("digits_accessibility"))
+    @Test(groups = arrayOf("operations_accessibility"))
     fun `plus button should be displayed and enabled`() {
         calculatorScreen.plusBtn.shouldBeDisplayedAndEnabled().shouldHaveText("+")
     }
 
-    @Test(groups = arrayOf("operations_accessibility"), dependsOnGroups = arrayOf("digits_accessibility"))
+    @Test(groups = arrayOf("operations_accessibility"))
     fun `minus button should be displayed and enabled`() {
         calculatorScreen.minusBtn.shouldBeDisplayedAndEnabled().shouldHaveText("−")
     }
 
-    @Test(groups = arrayOf("operations_accessibility"), dependsOnGroups = arrayOf("digits_accessibility"))
+    @Test(groups = arrayOf("operations_accessibility"))
     fun `divide button should be displayed and enabled`() {
         calculatorScreen.divideBtn.shouldBeDisplayedAndEnabled().shouldHaveText("÷")
     }
 
-    @Test(groups = arrayOf("operations_accessibility"), dependsOnGroups = arrayOf("digits_accessibility"))
+    @Test(groups = arrayOf("operations_accessibility"))
     fun `multiple button should be displayed and enabled`() {
         calculatorScreen.multipleBtn.shouldBeDisplayedAndEnabled().shouldHaveText("×")
     }
 
-    @Test(groups = arrayOf("operations_accessibility"), dependsOnGroups = arrayOf("digits_accessibility"))
+    @Test(groups = arrayOf("operations_accessibility"))
     fun `equals button should be displayed and enabled`() {
         calculatorScreen.equalsBtn.shouldBeDisplayedAndEnabled().shouldHaveText("=")
     }
 
-    @Test(groups = arrayOf("operations_accessibility"), dependsOnGroups = arrayOf("digits_accessibility"))
+    @Test(groups = arrayOf("operations_accessibility"))
     fun `decimal point button should be displayed and enabled`() {
         calculatorScreen.decimalPointBtn.shouldBeDisplayedAndEnabled().shouldHaveText(".")
     }
 
-    @Test(groups = arrayOf("operations_accessibility"), dependsOnGroups = arrayOf("digits_accessibility"))
+    @Test(groups = arrayOf("operations_accessibility"))
     fun `delete button should be displayed and enabled`() {
         calculatorScreen.deleteBtn.shouldBeDisplayedAndEnabled().shouldHaveText("DEL")
     }
 
-    @Test(groups = arrayOf("operations_accessibility"), dependsOnGroups = arrayOf("digits_accessibility"))
+    @Test(groups = arrayOf("operations_accessibility"))
     fun `clear button should not be displayed`() {
         calculatorScreen.clearBtn.shouldNotBeDisplayed()
     }

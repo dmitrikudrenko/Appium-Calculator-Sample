@@ -68,7 +68,7 @@ class ButtonsClickTest : CalculatorAbstractTest() {
         calculatorScreen.formulaField.shouldHaveText("9")
     }
 
-    @Test(groups = arrayOf("complex_tap"), dependsOnGroups = arrayOf("single_tap"))
+    @Test(groups = arrayOf("complex_tap"))
     fun `formula should contain data that user inputed`() {
         calculatorScreen.oneBtn.shouldClick()
         calculatorScreen.formulaField.shouldHaveText("1")
